@@ -8,6 +8,14 @@
 
 This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
 
+## 📈 Results at a Glance
+
+Charts built with Python from the CSV in this repo, after removing the rows with missing values (same cleaning step as the SQL).
+
+<p align="center"><img src="docs/images/monthly_sales.png" alt="Monthly retail sales" width="85%"></p>
+
+<p align="center"><img src="docs/images/category_sales.png" alt="Sales by category" width="85%"></p>
+
 ## Objectives
 
 1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
