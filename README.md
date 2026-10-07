@@ -1,12 +1,24 @@
 # Retail Sales Analysis SQL Project
 
+**Retail Sales Analytics | PostgreSQL • SQL • Data Cleaning • EDA • Business KPIs**
+
+## Business value
+
+Translate retail transactions into category performance, customer spending patterns and sales timing insights. The SQL demonstrates aggregations, date functions, common table expressions and window functions.
+
+### Questions this project addresses
+
+- Which product categories generate the most sales?
+- Who are the highest-spending customers?
+- How do transaction volumes vary across daily shifts?
+
+
 ## Project Overview
 
 **Project Title**: Retail Sales Analysis  
-**Level**: Beginner  
 **Database**: `p1_retail_db`
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+A PostgreSQL portfolio project covering database setup, exploratory data analysis, missing-value checks and ten business questions about retail sales. The repository includes the source CSV, SQL queries and static chart previews.
 
 ## 📈 Results at a Glance
 
@@ -15,6 +27,16 @@ Charts built with Python from the CSV in this repo, after removing the rows with
 <p align="center"><img src="docs/images/monthly_sales.png" alt="Monthly retail sales" width="85%"></p>
 
 <p align="center"><img src="docs/images/category_sales.png" alt="Sales by category" width="85%"></p>
+
+## How to reproduce
+
+1. Download `retail_sales_query_p1.sql` and `SQL - Retail Sales Analysis_utf .csv` from this repository.
+2. Open the SQL file in a PostgreSQL client such as pgAdmin. Review the script before running it, especially any table reset or deletion statements.
+3. Create `p1_retail_db`, connect to it, then create the `retail_sales` table. Run database creation separately if your client wraps scripts in a transaction.
+4. Import the CSV into `retail_sales` using your client's CSV import tool, matching the columns and enabling the header option.
+5. Run the exploration queries, inspect missing rows, then run the cleaning and analysis sections in order.
+
+**Skills demonstrated:** PostgreSQL, SQL, data validation, aggregations, customer segmentation, date/time analysis, CTEs and window functions.
 
 ## Objectives
 
@@ -85,7 +107,7 @@ FROM retail_sales
 WHERE sale_date = '2022-11-05';
 ```
 
-2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022**:
+2. **Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is at least 4 in the month of Nov-2022**:
 ```sql
 SELECT 
   *
@@ -136,7 +158,7 @@ GROUP
 ORDER BY 1
 ```
 
-7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**:
+7. **Write a SQL query to calculate the average sale for each month. Find the month with the highest average transaction value in each year**:
 ```sql
 SELECT 
        year,
@@ -212,3 +234,14 @@ GROUP BY shift
 
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
 
+
+## Interpretation & limitations
+
+Deleting rows with missing values can bias results. Review missingness and keep a raw copy before applying the demonstrated cleaning step. The monthly ranking uses average transaction value, rather than total monthly revenue.
+
+## Explore the analytics portfolio
+
+- [HR-Analysis-Dashboard](https://github.com/Scarface96/HR-Analysis-Dashboard)
+- [Global-CO2-Emissions-Dashboard](https://github.com/Scarface96/Global-CO2-Emissions-Dashboard)
+- [B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.](https://github.com/Scarface96/B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.)
+- [Toy-Store-KPI-Report](https://github.com/Scarface96/Toy-Store-KPI-Report)
