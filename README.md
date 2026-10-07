@@ -245,3 +245,7 @@ Deleting rows with missing values can bias results. Review missingness and keep 
 - [Global-CO2-Emissions-Dashboard](https://github.com/Scarface96/Global-CO2-Emissions-Dashboard)
 - [B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.](https://github.com/Scarface96/B2B-Sales-Pipeline-CRM-Dashboard-for-TechSolutions-Inc.)
 - [Toy-Store-KPI-Report](https://github.com/Scarface96/Toy-Store-KPI-Report)
+
+## About This Project
+
+An end-to-end PostgreSQL analytics project that converts retail transaction data into insights about categories, customers and sales patterns. It demonstrates database setup, data cleaning, exploratory analysis, CTEs, window functions and business-focused SQL problem solving.
