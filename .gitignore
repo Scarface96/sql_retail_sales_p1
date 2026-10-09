@@ -1,0 +1,7 @@
+
+# build output
+site/
+__pycache__/
+.pytest_cache/
+*.pyc
+.ipynb_checkpoints/
