@@ -1,6 +1,30 @@
 # Retail Sales Analysis SQL Project
 
-**Retail Sales Analytics | PostgreSQL • SQL • Data Cleaning • EDA • Business KPIs**
+**Retail Sales Analytics | PostgreSQL • SQL • DuckDB • Python • Data Cleaning • EDA • Customer Segmentation • Business KPIs**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+## 🌐 Live Report
+
+**[scarface96.github.io/sql_retail_sales_p1](https://scarface96.github.io/sql_retail_sales_p1/)**
+
+The SQL project now runs itself: Python loads the CSV into **DuckDB**, applies the same cleaning step, runs all ten business questions from `retail_sales_query_p1.sql`, and publishes each query beside its real result. GitHub Actions rebuilds the page on every push.
+
+**What's new:**
+
+- **Every SQL question answered live:** each query from the SQL file, run and shown next to its result
+- **Data-quality checks:** 3 incomplete rows removed, 10 missing ages, every total equals quantity × price, and a warning that `cogs` exceeds the selling price in 309 rows
+- **Seasonality:** both years run flat until August, then nearly triple from September to December
+- **Hour-of-day pattern:** orders almost stop between noon and 5 pm, then jump to about 200 an hour
+- **Category mix by age:** customers over 60 put about half their spending into Electronics
+- **RFM customer segmentation in SQL** (window functions and `NTILE`): Champions, Active, Valuable but slipping, Lapsed
+- **Cohort retention:** strong, seasonal repeat buying, but **no new customers at all in 2023**
+- **Live SQL editor:** write and run your own queries in the browser with DuckDB-WASM; nothing is sent to a server
+
 
 ## Business value
 
@@ -44,6 +68,24 @@ Charts built with Python from the CSV in this repo, after removing the rows with
 2. **Data Cleaning**: Identify and remove any records with missing or null values.
 3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
 4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
+
+## 🐍 Python + DuckDB version
+
+```
+├── analysis/
+│   ├── data.py        # DuckDB connection, cleaning, the ten questions, RFM, cohorts, seasonality
+│   ├── report.py      # Turns the analysis into the interactive web page
+│   └── build.py       # Charts, the live SQL editor, site/index.html
+├── tests/             # pytest checks (cleaning, every question runs, totals, RFM, cohorts)
+├── .github/workflows/deploy.yml   # Test, build and publish to GitHub Pages
+└── requirements.txt
+```
+
+```bash
+pip install -r requirements.txt
+python -m pytest
+python -m analysis.build    # writes site/index.html
+```
 
 ## Project Structure
 
