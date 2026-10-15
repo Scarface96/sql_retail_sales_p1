@@ -1,0 +1,39 @@
+// Power BI measures for Retail Sales Analysis
+// Create a measure table first (Home > Enter data > name it _Measures > Load),
+// then for each block: select _Measures > New measure > paste the block > set the format shown.
+
+// Format: #,0
+Total Sales =
+SUM ( fact_sales[total_sale] )
+
+// Format: #,0
+Transactions =
+COUNTROWS ( fact_sales )
+
+// Format: #,0
+Customers =
+DISTINCTCOUNT ( fact_sales[customer_id] )
+
+// Format: #,0.00
+Avg Transaction Value =
+DIVIDE ( [Total Sales], [Transactions] )
+
+// Format: #,0
+Units Sold =
+SUM ( fact_sales[quantity] )
+
+// Format: #,0
+Sales per Customer =
+DIVIDE ( [Total Sales], [Customers] )
+
+// Format: #,0
+Sales Last Year =
+CALCULATE ( [Total Sales], SAMEPERIODLASTYEAR ( dim_date[date] ) )
+
+// Format: 0.0%
+Sales YoY % =
+DIVIDE ( [Total Sales] - [Sales Last Year], [Sales Last Year] )
+
+// Format: 0.0%
+Category Share =
+DIVIDE ( [Total Sales], CALCULATE ( [Total Sales], ALL ( fact_sales[category] ) ) )

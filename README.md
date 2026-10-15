@@ -26,6 +26,12 @@ The SQL project now runs itself: Python loads the CSV into **DuckDB**, applies t
 - **Live SQL editor:** write and run your own queries in the browser with DuckDB-WASM; nothing is sent to a server
 
 
+## 📊 Tableau & Power BI
+
+A ready-to-build kit for **Power BI and Tableau** lives in [`bi/`](bi/): model-ready data in a star schema, ready-to-paste DAX measures and Tableau calculated fields, a branded theme, a page-by-page layout, and the exact numbers the finished dashboard should show. Every table is exported from the same cleaning code as the live report, and a test keeps them in step.
+
+**[Open the build guide →](bi/README.md)**
+
 ## Business value
 
 Translate retail transactions into category performance, customer spending patterns and sales timing insights. The SQL demonstrates aggregations, date functions, common table expressions and window functions.
