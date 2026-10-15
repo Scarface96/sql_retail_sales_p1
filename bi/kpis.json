@@ -1,0 +1,11 @@
+{
+  "Total sales": 911720,
+  "Transactions": 1997,
+  "Customers": 155,
+  "Average transaction value": 456.54,
+  "Units sold": 5018,
+  "Top category by sales": "Electronics (313,810)",
+  "Rows removed in cleaning": 3,
+  "Champions (RFM segment)": 40,
+  "Date range": "2022-01-01 to 2023-12-31"
+}

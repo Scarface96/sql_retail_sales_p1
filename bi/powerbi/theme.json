@@ -1,0 +1,71 @@
+{
+  "name": "Tony Mulunda - Teal & Amber",
+  "dataColors": [
+    "#0D6A62",
+    "#D48A00",
+    "#43BBAC",
+    "#C4553B",
+    "#5B7FA6",
+    "#8E6BB0",
+    "#7FA36B",
+    "#8FA39D",
+    "#F3B73E",
+    "#2E4A45"
+  ],
+  "foreground": "#10201E",
+  "foregroundNeutralSecondary": "#4C5F5A",
+  "foregroundNeutralTertiary": "#8FA39D",
+  "background": "#F7F9F6",
+  "backgroundLight": "#FFFFFF",
+  "backgroundNeutral": "#CBD5CD",
+  "tableAccent": "#0D6A62",
+  "good": "#0D6A62",
+  "neutral": "#D48A00",
+  "bad": "#C4553B",
+  "maximum": "#0D6A62",
+  "center": "#F3E9C8",
+  "minimum": "#C4553B",
+  "null": "#CBD5CD",
+  "hyperlink": "#0D6A62",
+  "visitedHyperlink": "#0A504A",
+  "textClasses": {
+    "callout": { "fontSize": 28, "fontFace": "Segoe UI Semibold", "color": "#10201E" },
+    "title": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#10201E" },
+    "header": { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#10201E" },
+    "label": { "fontSize": 10, "fontFace": "Segoe UI", "color": "#4C5F5A" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#CBD5CD" } }, "radius": 10 }],
+        "dropShadow": [{ "show": false }],
+        "visualHeader": [{ "show": true, "foreground": { "solid": { "color": "#4C5F5A" } } }],
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#10201E" } }, "fontSize": 12, "alignment": "left" }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#EDF1EC" } }, "transparency": 0 }],
+        "outspace": [{ "color": { "solid": { "color": "#EDF1EC" } } }]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [{ "color": { "solid": { "color": "#0D6A62" } }, "fontSize": 26 }],
+        "categoryLabels": [{ "show": true, "color": { "solid": { "color": "#4C5F5A" } }, "fontSize": 10 }]
+      }
+    },
+    "slicer": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#F7F9F6" } }, "transparency": 0 }]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "grid": [{ "gridHorizontal": true, "gridHorizontalColor": { "solid": { "color": "#E3E9E4" } }, "gridVertical": false }],
+        "columnHeaders": [{ "fontColor": { "solid": { "color": "#F2F6F2" } }, "backColor": { "solid": { "color": "#0D6A62" } } }]
+      }
+    }
+  }
+}
